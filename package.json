@@ -1,0 +1,28 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karim-saou/Restaurant-Page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karim-saou/Restaurant-Page/issues"
+  },
+  "homepage": "https://github.com/karim-saou/Restaurant-Page#readme",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
