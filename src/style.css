@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#content {
+  min-height: 100vh;
+  padding: 32px 48px;
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  color: wheat;
+  font-size: large;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  justify-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+main {
+  margin: 16px 0;
+  width: 800px;
+  background-image: url('./texture.jpg');
+  background-size: cover;
+  border-radius: 100px;
+  opacity: 0.5;
+  padding: 32px;
+}
