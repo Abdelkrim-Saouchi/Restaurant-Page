@@ -5,6 +5,7 @@ import homeComponents from './home';
 import menuComponents from './menu';
 import contactComponents from './contacts';
 
+// set page after first load at Home page
 let page = 'Home';
 
 function switchPage(Page) {

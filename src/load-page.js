@@ -29,12 +29,19 @@ export function makeMain(arr) {
   arr.forEach((element) => {
     main.appendChild(element);
   });
+
   return main;
 }
 
 function makeFooter() {
   const footer = domCreator('footer');
-  footer.textContent = 'Created by Krimothiazine';
+  const link = domCreator('a');
+  link.textContent = 'Krimothiazine';
+  link.href = 'https://github.com/karim-saou';
+  link.style.display = 'inline';
+  footer.textContent = 'Created by ';
+  footer.appendChild(link);
+
   return footer;
 }
 

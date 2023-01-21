@@ -41,6 +41,16 @@ nav ul li:is(:focus, :hover) {
   color: var(--green-color);
 }
 
+footer a {
+  text-decoration-line: none;
+  color: var(--sand-color);
+}
+
+footer a:is(:focus, :hover) {
+  text-decoration-line: underline;
+  color: var(--green-color);
+}
+
 /* style home page */
 
 main {
