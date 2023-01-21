@@ -132,3 +132,34 @@ main h1 {
 .food-card img {
   max-width: 50%;
 }
+
+/* style Contact page */
+
+#contact-title,
+.contact-card {
+  align-self: center;
+}
+
+#contact-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.contact-card .contact-info {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.contact-card img {
+  max-width: 20%;
+  border-radius: 12px;
+  overflow: hidden;
+}
