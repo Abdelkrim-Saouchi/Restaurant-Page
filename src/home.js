@@ -2,9 +2,13 @@ import { domCreator } from './dom-manipulation';
 
 const contentObj = {
   title: 'Khaima Restaurant',
-  view: {
+  reviewerOne: {
     text: '"Khaima Restaurant is the palce in middle sahara with Algerian traditional food. Food is a perfect blend of flavors and spices that will leave your taste buds tingling. The dishes are hearty, comforting and perfect for sharing with friends and family. If you ever have a chance to try this cuisine, I highly recommend it." ',
-    viewer: 'Visitor',
+    reviewer: 'John Kennedy',
+  },
+  reviewerTwo: {
+    text: '"Khaima in the Algerian Sahara is a unique and unforgettable dining experience. The traditional Berber cuisine is delicious and authentic, and the desert setting is breathtaking. Highly recommend a visit to Khaima for a truly one-of-a-kind meal."',
+    reviewer: 'Mohammed El Kendy',
   },
   hours: {
     subtitle: 'Work Hours',
@@ -29,15 +33,15 @@ function makeTitle() {
   return title;
 }
 
-function makeView() {
+function makeReview(text, viewerName) {
   const view = domCreator('div');
   view.classList.add('view');
 
   const viewPara = domCreator('p');
-  viewPara.textContent = contentObj.view.text;
+  viewPara.textContent = text;
 
   const viewer = domCreator('h2');
-  viewer.textContent = contentObj.view.viewer;
+  viewer.textContent = viewerName;
 
   view.appendChild(viewPara);
   view.appendChild(viewer);
@@ -84,9 +88,20 @@ function makeLocationDiv() {
   return locationDiv;
 }
 
+const reviewerOne = makeReview(
+  contentObj.reviewerOne.text,
+  contentObj.reviewerOne.reviewer
+);
+
+const reviewerTwo = makeReview(
+  contentObj.reviewerTwo.text,
+  contentObj.reviewerTwo.reviewer
+);
+
 const homeComponents = [
   makeTitle(),
-  makeView(),
+  reviewerOne,
+  reviewerTwo,
   makeHoursDiv(),
   makeLocationDiv(),
 ];

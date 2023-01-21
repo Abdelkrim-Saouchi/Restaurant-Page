@@ -2,6 +2,7 @@ import { domSelector } from './dom-manipulation';
 import homeComponents from './home';
 import { makeMain } from './structure';
 import menuComponents from './menu';
+import contactComponents from './contacts';
 
 export default function switchPage(page) {
   let main = domSelector('#content main');
@@ -16,6 +17,11 @@ export default function switchPage(page) {
     if (page === 'Menu') {
       main.remove();
       main = makeMain(menuComponents);
+      content.insertBefore(main, footer);
+    }
+    if (page === 'Contact') {
+      main.remove();
+      main = makeMain(contactComponents);
       content.insertBefore(main, footer);
     }
   }

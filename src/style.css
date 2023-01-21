@@ -1,3 +1,10 @@
+:root {
+  --sand-color: #bd9b16;
+  --moon-color: #ffffff;
+  --night-color: rgb(44 46 57);
+  --green-color: #127533;
+}
+
 *,
 *::after,
 *::before {
@@ -12,7 +19,7 @@
   background-image: url('./bg.jpg');
   background-size: cover;
   background-attachment: fixed;
-  color: #bd9b16;
+  color: var(--sand-color);
   font-size: large;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -22,35 +29,49 @@
 nav ul {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 64px;
+  cursor: pointer;
 }
+
+nav ul li {
+  font-size: 32px;
+}
+
+nav ul li:is(:focus, :hover) {
+  color: var(--green-color);
+}
+
+/* style home page */
 
 main {
   margin: 16px 0;
   width: 800px;
-  background-color: rgb(44 46 57);
+  background-color: var(--night-color);
   border-radius: 18px;
   opacity: 0.5;
   padding: 32px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
 main h1 {
   align-self: center;
   font-size: 48px;
-  opacity: 1;
   margin-bottom: 16px;
+  cursor: pointer;
+}
+
+main h1:hover {
+  color: var(--green-color);
 }
 
 .view,
 .work-hours,
 .location {
-  background-color: #ffffff;
+  background-color: var(--moon-color);
   padding: 12px 28px;
   border-radius: 16px;
-  color: #bd9b16;
+  color: var(--sand-color);
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
@@ -99,7 +120,7 @@ main h1 {
 #category {
   font-size: 28px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--moon-color);
   padding: 10px 16px;
   border-radius: 16px;
 }
@@ -109,7 +130,7 @@ main h1 {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  background-color: #ffffff;
+  background-color: var(--moon-color);
   padding: 16px;
   border-radius: 16px;
 }
@@ -152,8 +173,12 @@ main h1 {
   margin-bottom: 32px;
 }
 
+.contact-card h3 {
+  margin-bottom: 10px;
+}
+
 .contact-card .contact-info {
-  background-color: #ffffff;
+  background-color: var(--moon-color);
   padding: 12px;
   border-radius: 12px;
 }

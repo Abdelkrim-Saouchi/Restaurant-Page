@@ -5,7 +5,7 @@ const mainDishes = {
   couscous: {
     name: 'Couscous',
     desc: 'Couscous is a traditional North African dish made from small steamed balls of semolina wheat. It is often served as a side dish with meat or vegetables and can be made sweet or savory. It is a staple in Algerian cuisine and is enjoyed by locals and visitors alike.',
-    price: '1$',
+    price: '3$',
     imgSrc: '../src/couscous.jpg',
   },
   zviti: {
@@ -23,7 +23,7 @@ const mainDishes = {
 };
 
 const entrees = {
-  category: 'Desert Dishes',
+  category: 'Entrees and Dessert Dishes',
   tea: {
     name: 'Sahara Tea',
     desc: 'Algerian Sahara tea is a type of black tea that is grown and produced in the Sahara desert region of Algeria. It is known for its strong, bold flavor and is often served with mint or other herbs to enhance the taste. It is considered a traditional drink in Algeria and is enjoyed by many locals and tourists alike.',
@@ -33,7 +33,7 @@ const entrees = {
   baklava: {
     name: 'Baklava',
     desc: 'Algerian baklava is a sweet pastry made from layers of phyllo dough filled with chopped nuts, typically almonds or pistachios. It is sweetened with honey or syrup and is often flavored with cinnamon or orange blossom water. It is a popular dessert in Algeria and can be found in many bakeries and restaurants throughout the country.',
-    price: '5$',
+    price: '2$',
     // Image by fabrikasimf on Freepik
     imgSrc: '../src/baklava.jpg',
   },
@@ -115,13 +115,16 @@ const baklava = foodType(
   entrees.baklava.imgSrc
 );
 
+const mainDishesSubtitle = makeCategory(mainDishes.category);
+const entreesSubtitle = makeCategory(entrees.category);
+
 const menuComponents = [
   menuTitle(),
-  makeCategory('Main Dishes'),
+  mainDishesSubtitle,
   couscousDish,
   zvitiDish,
   chakhchokhaDish,
-  makeCategory('Entrees'),
+  entreesSubtitle,
   saharaTea,
   baklava,
 ];

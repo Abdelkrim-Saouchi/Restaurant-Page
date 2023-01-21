@@ -25,10 +25,6 @@ export function makeHeader() {
 
 export function makeMain(arr) {
   const main = domCreator('main');
-  // main.appendChild(makeTitle());
-  // main.appendChild(makeView());
-  // main.appendChild(makeHoursDiv());
-  // main.appendChild(makeLocationDiv());
   arr.forEach((element) => {
     main.appendChild(element);
   });
