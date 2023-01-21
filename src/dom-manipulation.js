@@ -5,3 +5,7 @@ export function domCreator(ele) {
 export function domSelector(ele) {
   return document.querySelector(ele);
 }
+
+export function domSelectorAll(ele) {
+  return document.querySelectorAll(ele);
+}

@@ -1,4 +1,3 @@
-import { makeHoursDiv, makeLocationDiv, makeTitle, makeView } from './home';
 import { domCreator } from './dom-manipulation';
 
 export function makeHeader() {
@@ -24,12 +23,15 @@ export function makeHeader() {
   return header;
 }
 
-export function makeMain() {
+export function makeMain(arr) {
   const main = domCreator('main');
-  main.appendChild(makeTitle());
-  main.appendChild(makeView());
-  main.appendChild(makeHoursDiv());
-  main.appendChild(makeLocationDiv());
+  // main.appendChild(makeTitle());
+  // main.appendChild(makeView());
+  // main.appendChild(makeHoursDiv());
+  // main.appendChild(makeLocationDiv());
+  arr.forEach((element) => {
+    main.appendChild(element);
+  });
   return main;
 }
 
