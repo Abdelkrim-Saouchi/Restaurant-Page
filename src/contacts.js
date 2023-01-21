@@ -1,28 +1,5 @@
 import { domCreator } from './dom-manipulation';
-
-const contacts = {
-  mamaCamel: {
-    name: 'Mama Camel',
-    job: 'Chef',
-    phone: '548-545-524',
-    email: 'mamaCamelAg@fake.com',
-    img: '../src/mama-camel.jpg',
-  },
-  papCamel: {
-    name: 'Papa Camel',
-    job: 'Manager',
-    phone: '442-544-111',
-    email: 'papaCamelAg@fake.com',
-    img: '../src/papa-camel.jpg',
-  },
-  babyCamel: {
-    name: 'Baby Camel',
-    job: 'Waiter',
-    phone: '542-444-200',
-    email: 'babyCamelAg@fake.com',
-    img: '../src/baby-camel.jpg',
-  },
-};
+import { contacts } from './info';
 
 function makeContactTitle() {
   const contactTitle = domCreator('h2');

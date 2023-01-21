@@ -1,32 +1,6 @@
 import { domCreator } from './dom-manipulation';
+import { contentObj } from './info';
 
-const contentObj = {
-  title: 'Khaima Restaurant',
-  reviewerOne: {
-    text: '"Khaima Restaurant is the palce in middle sahara with Algerian traditional food. Food is a perfect blend of flavors and spices that will leave your taste buds tingling. The dishes are hearty, comforting and perfect for sharing with friends and family. If you ever have a chance to try this cuisine, I highly recommend it." ',
-    reviewer: 'John Kennedy',
-  },
-  reviewerTwo: {
-    text: '"Khaima in the Algerian Sahara is a unique and unforgettable dining experience. The traditional Berber cuisine is delicious and authentic, and the desert setting is breathtaking. Highly recommend a visit to Khaima for a truly one-of-a-kind meal."',
-    reviewer: 'Mohammed El Kendy',
-  },
-  hours: {
-    subtitle: 'Work Hours',
-    sunday: '8am-8pm',
-    monday: '8am-8am',
-    tuesday: '8am - 7pm',
-    wednesday: '7am - 6pm',
-    thursday: '8am - 10pm',
-    friday: '8am - 10pm',
-    saturday: '8am - 10pm',
-  },
-  location: {
-    subtitle: 'Location',
-    address: 'Tassili, Algeria',
-  },
-};
-
-// eslint-disable-next-line import/prefer-default-export
 function makeTitle() {
   const title = domCreator('h1');
   title.textContent = contentObj.title;

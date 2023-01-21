@@ -1,8 +1,44 @@
-import { domSelector } from './dom-manipulation';
-import { makeHeader, makeMain, makeFooter } from './structure';
+import { domSelector, domCreator } from './dom-manipulation';
 import homeComponents from './home';
 
-export default function loadPage() {
+function makeHeader() {
+  const header = domCreator('header');
+  const nav = domCreator('nav');
+  const ul = domCreator('ul');
+
+  const homeItem = domCreator('li');
+  homeItem.textContent = 'Home';
+
+  const menuItem = domCreator('li');
+  menuItem.textContent = 'Menu';
+
+  const contactItem = domCreator('li');
+  contactItem.textContent = 'Contact';
+
+  header.appendChild(nav);
+  nav.appendChild(ul);
+  ul.appendChild(homeItem);
+  ul.appendChild(menuItem);
+  ul.appendChild(contactItem);
+
+  return header;
+}
+
+export function makeMain(arr) {
+  const main = domCreator('main');
+  arr.forEach((element) => {
+    main.appendChild(element);
+  });
+  return main;
+}
+
+function makeFooter() {
+  const footer = domCreator('footer');
+  footer.textContent = 'Created by Krimothiazine';
+  return footer;
+}
+
+export function loadPage() {
   const content = domSelector('#content');
   content.appendChild(makeHeader());
   content.appendChild(makeMain(homeComponents));
