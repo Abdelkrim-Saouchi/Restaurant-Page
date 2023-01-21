@@ -1,7 +1,7 @@
 import { domSelector } from './dom-manipulation';
-import { makeTitle, makeView, makeHoursDiv, makeLocationDiv } from './home';
+import homeComponents from './home';
 import { makeMain } from './structure';
-import { menuTitle, makeCategory, couscousDish, zvitiDish } from './menu';
+import menuComponents from './menu';
 
 export default function switchPage(page) {
   let main = domSelector('#content main');
@@ -10,22 +10,12 @@ export default function switchPage(page) {
   if (main !== null) {
     if (page === 'Home') {
       main.remove();
-      main = makeMain([
-        makeTitle(),
-        makeView(),
-        makeHoursDiv(),
-        makeLocationDiv(),
-      ]);
+      main = makeMain(homeComponents);
       content.insertBefore(main, footer);
     }
     if (page === 'Menu') {
       main.remove();
-      main = makeMain([
-        menuTitle(),
-        makeCategory('Main Dishes'),
-        couscousDish,
-        zvitiDish,
-      ]);
+      main = makeMain(menuComponents);
       content.insertBefore(main, footer);
     }
   }

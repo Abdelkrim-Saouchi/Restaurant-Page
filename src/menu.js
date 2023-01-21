@@ -18,23 +18,24 @@ const mainDishes = {
     name: 'Chakhchokha',
     desc: 'Chakhchokha is a traditional Algerian dish made of cooked and mashed tomatoes and bell peppers, typically served with bread. It is a hearty and flavorful dish, and is often served as a side dish or as a topping for meat dishes. It is a staple in Algerian cuisine and is enjoyed by locals and visitors alike.',
     price: '3$',
-    imgSrc: './chakhchoka.jpeg',
+    imgSrc: '../src/chakhchoka.jpeg',
   },
 };
 
-const desertDishes = {
+const entrees = {
   category: 'Desert Dishes',
   tea: {
     name: 'Sahara Tea',
-    desc: 'kjdsfhjkhdsjfhkjdskjfsjdq',
+    desc: 'Algerian Sahara tea is a type of black tea that is grown and produced in the Sahara desert region of Algeria. It is known for its strong, bold flavor and is often served with mint or other herbs to enhance the taste. It is considered a traditional drink in Algeria and is enjoyed by many locals and tourists alike.',
     price: '0.5$',
-    imgSrc: './chakhchoka.jpeg',
+    imgSrc: '../src/sahara-tea.jpg',
   },
   baklava: {
     name: 'Baklava',
-    desc: 'fkdjskg dlksgj lkgjsgljsk jldsg jglsjg dlsgjsjglsdkjlkjsljgldjgskjd sdgjldsjgk',
+    desc: 'Algerian baklava is a sweet pastry made from layers of phyllo dough filled with chopped nuts, typically almonds or pistachios. It is sweetened with honey or syrup and is often flavored with cinnamon or orange blossom water. It is a popular dessert in Algeria and can be found in many bakeries and restaurants throughout the country.',
     price: '5$',
-    imgSrc: './chakhchoka.jpeg',
+    // Image by fabrikasimf on Freepik
+    imgSrc: '../src/baklava.jpg',
   },
 };
 
@@ -93,4 +94,36 @@ const zvitiDish = foodType(
   mainDishes.zviti.imgSrc
 );
 
-export { couscousDish, zvitiDish, makeCategory, menuTitle };
+const chakhchokhaDish = foodType(
+  mainDishes.chakhchokha.name,
+  mainDishes.chakhchokha.desc,
+  mainDishes.chakhchokha.price,
+  mainDishes.chakhchokha.imgSrc
+);
+
+const saharaTea = foodType(
+  entrees.tea.name,
+  entrees.tea.desc,
+  entrees.tea.price,
+  entrees.tea.imgSrc
+);
+
+const baklava = foodType(
+  entrees.baklava.name,
+  entrees.baklava.desc,
+  entrees.baklava.price,
+  entrees.baklava.imgSrc
+);
+
+const menuComponents = [
+  menuTitle(),
+  makeCategory('Main Dishes'),
+  couscousDish,
+  zvitiDish,
+  chakhchokhaDish,
+  makeCategory('Entrees'),
+  saharaTea,
+  baklava,
+];
+
+export default menuComponents;

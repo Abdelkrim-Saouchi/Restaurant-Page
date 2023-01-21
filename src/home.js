@@ -23,13 +23,13 @@ const contentObj = {
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export function makeTitle() {
+function makeTitle() {
   const title = domCreator('h1');
   title.textContent = contentObj.title;
   return title;
 }
 
-export function makeView() {
+function makeView() {
   const view = domCreator('div');
   view.classList.add('view');
 
@@ -44,7 +44,7 @@ export function makeView() {
   return view;
 }
 
-export function makeHoursDiv() {
+function makeHoursDiv() {
   const workHours = domCreator('div');
   workHours.classList.add('work-hours');
 
@@ -68,7 +68,7 @@ export function makeHoursDiv() {
   return workHours;
 }
 
-export function makeLocationDiv() {
+function makeLocationDiv() {
   const locationDiv = domCreator('div');
   locationDiv.classList.add('location');
 
@@ -83,3 +83,12 @@ export function makeLocationDiv() {
 
   return locationDiv;
 }
+
+const homeComponents = [
+  makeTitle(),
+  makeView(),
+  makeHoursDiv(),
+  makeLocationDiv(),
+];
+
+export default homeComponents;
